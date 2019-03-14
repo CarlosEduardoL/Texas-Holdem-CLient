@@ -3,6 +3,7 @@ package view;
 import controller.MainScreenController;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.List;
@@ -16,6 +17,7 @@ public class MainScreen extends JFrame{
     private JButton seguir,salir;
     private MainScreenController controller;
     private HashMap<String,JLabel> ips = new HashMap<>();
+    private JTextArea area;
 
     public MainScreen(){
 
@@ -29,6 +31,7 @@ public class MainScreen extends JFrame{
         botonContainer.setLayout(new GridLayout(0,1));
 
         controller = new MainScreenController(this);
+        area = new JTextArea();
 
         seguir = new JButton("Seguir");
         seguir.setActionCommand("Seguir");
@@ -47,6 +50,7 @@ public class MainScreen extends JFrame{
         add(privateLabelContainer,BorderLayout.SOUTH);
         add(publicLabelContainer,BorderLayout.CENTER);
         add(botonContainer,BorderLayout.EAST);
+        add(area,BorderLayout.WEST);
 
     }
 
@@ -54,8 +58,13 @@ public class MainScreen extends JFrame{
         ips.get(ip).setText(ips.get(ip).getText() + ": Salio");
     }
 
+    public void append(String text){
+        area.append(text);
+    }
+
     public void addIp(String ip){
-        ips.put(ip,new JLabel(ip));
+        ips.put(ip,new JLabel(ip, SwingConstants.CENTER));
+        ips.get(ip).setBorder(BorderFactory.createLineBorder(Color.BLUE));
         ips.get(ip).setText(ips.size() + ":" + ip);
         ipsContainer.add(ips.get(ip));
         pack();
@@ -63,13 +72,17 @@ public class MainScreen extends JFrame{
     }
 
     public void addPublicCard(String carta){
-        publicLabelContainer.add(new JLabel(carta));
+        JLabel label = new JLabel(carta,SwingConstants.CENTER);
+        label.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+        publicLabelContainer.add(label);
         pack();
         setSize(600,600);
     }
 
     public void addPrivateCard(String carta){
-        privateLabelContainer.add(new JLabel(carta));
+        JLabel label = new JLabel(carta,SwingConstants.CENTER);
+        label.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+        privateLabelContainer.add(label);
         pack();
         setSize(600,600);
     }

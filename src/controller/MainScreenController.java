@@ -13,6 +13,7 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
     private MainScreen view;
     private boolean sali = false;
     TCPConnection connection;
+    private boolean esperar;
     
     public MainScreenController(MainScreen view)
     {
@@ -40,21 +41,32 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
             view.addPublicCard(c.getNombre());
         }else if (type.equals("Player")){
             view.addIp(mensaje);
+            view.append(mensaje+" Se ha unido a la parida \n");
         }else if (type.equals("Salio")){
             System.out.println(mensaje);
             view.disconet(mensaje);
+            view.append(mensaje+" ha salido a la parida \n");
         }else if(type.equals("Carta Privada")){
             Carta c = new Gson().fromJson(mensaje,Carta.class);
             view.addPrivateCard(c.getNombre());
+        }else if (type.equals("Permiso")){
+            esperar = false;
+            view.append("Es tu Turno\n");
         }
     }
 
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        if (actionEvent.getActionCommand().equals("Salir") && !sali){
-            sali = true;
-            connection.sendMessage("Sali");
+        if (!esperar){
+            if (actionEvent.getActionCommand().equals("Salir") && !sali){
+                sali = true;
+                connection.sendMessage("Sali");
+            }else{
+                connection.sendMessage("Sigo");
+            }
+
+            esperar = true;
         }
     }
 }
