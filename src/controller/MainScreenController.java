@@ -35,6 +35,7 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
             String mensaje = msj.split("::")[1];
             if (type.equals("Carta Publica")){
                 Carta c = new Gson().fromJson(mensaje,Carta.class);
+                view.addPublicCard(c.getNombre());
             }
         }
     }
