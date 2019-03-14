@@ -10,18 +10,19 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
     
     private MainScreen view;
     private boolean sali = false;
+    TCPConnection connection;
     
     public MainScreenController(){
         init();
     }
 
     private void init() {
+        connection = TCPConnection.getInstance();
+        connection.addConnectionEvent(this);
     }
 
-
-
     @Override
-    public void onConnection(String ip) {
+    public void onConnection() {
 
     }
 

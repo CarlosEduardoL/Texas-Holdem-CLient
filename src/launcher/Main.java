@@ -1,9 +1,10 @@
 package launcher;
 
 import view.MainScreen;
+import view.WaitScreen;
 
 public class Main {
     public static void main(String ...args){
-        new MainScreen().setVisible(true);
+        new WaitScreen().setVisible(true);
     }
 }
