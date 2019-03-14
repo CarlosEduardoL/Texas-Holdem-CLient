@@ -4,6 +4,9 @@ import communication.TCPConnection;
 import view.MainScreen;
 import view.WaitScreen;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 public class WaitScreenController implements TCPConnection.ConnectionEvent {
 
     TCPConnection connection;
@@ -17,7 +20,11 @@ public class WaitScreenController implements TCPConnection.ConnectionEvent {
     private void init(){
         connection = TCPConnection.getInstance(5000);
         connection.addConnectionEvent(this);
-        connection.connect("172.30.0.1",5000);
+        try {
+            connection.connect(InetAddress.getLocalHost().getHostAddress(),5000);
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

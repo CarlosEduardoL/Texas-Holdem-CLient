@@ -59,20 +59,17 @@ public class TCPConnection {
 		}
 	}
 
-	private String ip;
-
 	//Metodo del cliente
 	public void connect(String direccion, int port) {
 		for (int i = 0; i < 256 && socket == null; i++) {
 			Long time = System.currentTimeMillis();
-			for (int j = 1; j < 255 && socket == null; j++) {
-				this.ip = "172.30."+i+"."+j;
+			for (int j = 1; j < 255&& socket == null; j++) {
+				String[] algo = direccion.replace(".","j").split("j");
+				String ip =  algo[0]+"."+algo[1]+"."+i+"."+j;
 				new Thread(
 						() -> {
-							String ip = TCPConnection.this.ip;
-							if(ip.equals("172.30.181.140")){
-								System.out.println("ip = " + ip);
-							}
+								//System.out.println("ip = " + ip);
+
 							try {
 								if (TCPConnection.this.socket == null){
 
@@ -123,7 +120,7 @@ public class TCPConnection {
 				e.printStackTrace();
 			}
 
-			System.out.println(TCPConnection.this.ip + "" +
+			System.out.println(i + "" +
 					" \nTiempo de busqueda:: " + (System.currentTimeMillis() - time) + "" +
 					" \nCantidad De hilos:: " + Thread.activeCount());
 		}
