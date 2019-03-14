@@ -22,6 +22,7 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
     }
 
     private void init() {
+        esperar = true;
         connection = TCPConnection.getInstance();
         connection.addConnectionEvent(this);
     }
