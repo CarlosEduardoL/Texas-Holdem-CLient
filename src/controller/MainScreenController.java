@@ -38,6 +38,10 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
             if (type.equals("Carta Publica")){
                 Carta c = new Gson().fromJson(mensaje,Carta.class);
                 view.addPublicCard(c.getNombre());
+            }else if (type.equals("Player")){
+                view.addIp(mensaje);
+            }else if (type.equals("Salio")){
+                view.disconet(mensaje);
             }
         }
     }
@@ -46,6 +50,7 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
     public void actionPerformed(ActionEvent actionEvent) {
         if (actionEvent.getActionCommand().equals("Salirse")){
             sali = true;
+            connection.sendMessage("Sali");
         }
     }
 }
