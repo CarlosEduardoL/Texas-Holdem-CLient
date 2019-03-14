@@ -40,6 +40,7 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
         if (type.equals("Carta Publica")){
             Carta c = new Gson().fromJson(mensaje,Carta.class);
             view.addPublicCard(c.getNombre());
+            view.append("El servido agrego una carta publica\n");
         }else if (type.equals("Player")){
             view.addIp(mensaje);
             view.append(mensaje+" Se ha unido a la parida \n");

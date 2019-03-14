@@ -44,7 +44,7 @@ public class MainScreen extends JFrame{
         botonContainer.add(salir);
         botonContainer.add(seguir);
 
-        setSize(600,600);
+        setSize(800,600);
         setLayout(new BorderLayout());
         add(ipsContainer,BorderLayout.NORTH);
         add(privateLabelContainer,BorderLayout.SOUTH);
