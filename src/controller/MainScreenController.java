@@ -14,7 +14,9 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
     private boolean sali = false;
     TCPConnection connection;
     
-    public MainScreenController(){
+    public MainScreenController(MainScreen view)
+    {
+        this.view = view;
         init();
     }
 

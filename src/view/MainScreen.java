@@ -23,7 +23,7 @@ public class MainScreen extends JFrame{
         publicLabelContainer.setLayout(new GridLayout(1,0));
         botonContainer.setLayout(new GridLayout(0,1));
 
-        controller = new MainScreenController();
+        controller = new MainScreenController(this);
 
         seguir = new JButton("Seguir");
         seguir.setActionCommand("Seguir");
@@ -40,9 +40,11 @@ public class MainScreen extends JFrame{
         setLayout(new BorderLayout());
         add(privateLabelContainer,BorderLayout.SOUTH);
         add(publicLabelContainer,BorderLayout.CENTER);
-        add(botonContainer);
+        add(botonContainer,BorderLayout.EAST);
 
     }
+
+
 
     public void addPublicCard(String carta){
         publicLabelContainer.add(new JLabel(carta));
