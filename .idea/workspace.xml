@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="365b2d27-4a17-4c42-9ba6-1dc885623346" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/WaitScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/WaitScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/communication/Receptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/communication/Receptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/communication/TCPConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/communication/TCPConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/MainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/MainScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/launcher/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/launcher/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/MainScreen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -83,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/MainScreenController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+            <state relative-caret-position="492">
+              <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,6 +111,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="CarlosEduardoL &lt;carlos.lizalda1@hotmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -126,17 +125,17 @@
         <option value="$PROJECT_DIR$/src/view/pane.form" />
         <option value="$PROJECT_DIR$/src/launcher/Main.java" />
         <option value="$PROJECT_DIR$/src/communication/Receptor.java" />
-        <option value="$PROJECT_DIR$/src/controller/MainScreenController.java" />
         <option value="$PROJECT_DIR$/src/view/WaitScreen.java" />
         <option value="$PROJECT_DIR$/src/controller/WaitScreenController.java" />
         <option value="$PROJECT_DIR$/src/communication/TCPConnection.java" />
         <option value="$PROJECT_DIR$/src/view/MainScreen.java" />
+        <option value="$PROJECT_DIR$/src/controller/MainScreenController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="319" />
-    <option name="y" value="143" />
+    <option name="x" value="272" />
+    <option name="y" value="202" />
     <option name="width" value="1604" />
     <option name="height" value="908" />
   </component>
@@ -204,8 +203,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="307" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552536227739" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Estructuras-fornite " />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552538850386" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/library/gson-2.8.5.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -257,11 +260,18 @@
       <option name="presentableId" value="Default" />
       <updated>1552411449194</updated>
     </task>
+    <task id="LOCAL-00001" summary="Cliente Busca servidor disponible">
+      <created>1552536259984</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552536259984</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="319" y="143" width="1604" height="908" extended-state="0" />
-    <editor active="true" />
+    <frame x="312" y="284" width="1604" height="908" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17650834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -291,21 +301,15 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cliente Busca servidor disponible" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cliente Busca servidor disponible" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/src/view/MainScreen.java" />
     <entry file="file://$PROJECT_DIR$/src/communication/Connection.java" />
     <entry file="file://$PROJECT_DIR$/src/view/pane.java" />
     <entry file="file://$PROJECT_DIR$/src/view/pane.form" />
-    <entry file="file://$PROJECT_DIR$/src/controller/MainScreenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/launcher/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -391,6 +395,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/MainScreenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

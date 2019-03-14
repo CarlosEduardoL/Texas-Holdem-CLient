@@ -1,6 +1,8 @@
 package controller;
 
+import com.google.gson.Gson;
 import communication.TCPConnection;
+import model.Carta;
 import view.MainScreen;
 
 import java.awt.event.ActionEvent;
@@ -29,7 +31,11 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
     @Override
     public void onMessage(String msj) {
         if (!sali){
-
+            String type = msj.split("::")[0];
+            String mensaje = msj.split("::")[1];
+            if (type.equals("Carta Publica")){
+                Carta c = new Gson().fromJson(mensaje,Carta.class);
+            }
         }
     }
 
