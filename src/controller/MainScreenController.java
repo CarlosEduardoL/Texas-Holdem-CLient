@@ -54,6 +54,9 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
         }else if (type.equals("Permiso")){
             esperar = false;
             view.append("Es tu Turno\n");
+        }else if (type.equals("Siguio")){
+            esperar = false;
+            view.append(mensaje+" sigue en la parida \n");
         }
     }
 
@@ -69,6 +72,8 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
             }
 
             esperar = true;
+        }else {
+            view.errorMessage("Usted ya salio de la partida");
         }
     }
 }

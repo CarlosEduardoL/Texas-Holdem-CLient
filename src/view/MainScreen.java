@@ -58,6 +58,10 @@ public class MainScreen extends JFrame{
         ips.get(ip).setText(ips.get(ip).getText() + ": Salio");
     }
 
+    public void errorMessage(String error){
+        JOptionPane.showConfirmDialog(this,error,"Error",JOptionPane.ERROR_MESSAGE);
+    }
+
     public void append(String text){
         area.append(text);
     }
