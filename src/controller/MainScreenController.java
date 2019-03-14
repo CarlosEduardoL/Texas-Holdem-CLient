@@ -48,7 +48,7 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        if (actionEvent.getActionCommand().equals("Salirse")){
+        if (actionEvent.getActionCommand().equals("Salir")){
             sali = true;
             connection.sendMessage("Sali");
         }
