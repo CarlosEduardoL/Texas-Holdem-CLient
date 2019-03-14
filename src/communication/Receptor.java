@@ -30,7 +30,6 @@ public class Receptor extends Thread{
 					input.close();
 					isAlive = false;
 				}
-				System.out.println(">>Receptor: " + line);
 				for(int i=0 ; i<listeners.size() ; i++) listeners.get(i).onMessage(line);
 			}
 		}catch(IOException ex) {

@@ -41,6 +41,7 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
             }else if (type.equals("Player")){
                 view.addIp(mensaje);
             }else if (type.equals("Salio")){
+                System.out.println(mensaje);
                 view.disconet(mensaje);
             }
         }
