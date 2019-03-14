@@ -69,10 +69,13 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
             }else{
                 connection.sendMessage("Sigo");
             }
-
             esperar = true;
         }else {
-            view.errorMessage("Usted ya salio de la partida");
+            if (sali) {
+                view.errorMessage("Usted ya salio de la partida");
+            } else{
+                view.errorMessage("No es su turno aun");
+            }
         }
     }
 }
