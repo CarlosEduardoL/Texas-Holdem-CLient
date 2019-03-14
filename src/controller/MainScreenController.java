@@ -43,6 +43,9 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
         }else if (type.equals("Salio")){
             System.out.println(mensaje);
             view.disconet(mensaje);
+        }else if(type.equals("Carta Privada")){
+            Carta c = new Gson().fromJson(mensaje,Carta.class);
+            view.addPrivateCard(c.getNombre());
         }
     }
 
