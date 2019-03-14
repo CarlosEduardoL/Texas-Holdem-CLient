@@ -32,24 +32,24 @@ public class MainScreenController implements TCPConnection.ConnectionEvent, Acti
 
     @Override
     public void onMessage(String msj) {
-        if (!sali){
-            String type = msj.split("::")[0];
-            String mensaje = msj.split("::")[1];
-            if (type.equals("Carta Publica")){
-                Carta c = new Gson().fromJson(mensaje,Carta.class);
-                view.addPublicCard(c.getNombre());
-            }else if (type.equals("Player")){
-                view.addIp(mensaje);
-            }else if (type.equals("Salio")){
-                System.out.println(mensaje);
-                view.disconet(mensaje);
-            }
+
+        String type = msj.split("::")[0];
+        String mensaje = msj.split("::")[1];
+        if (type.equals("Carta Publica")){
+            Carta c = new Gson().fromJson(mensaje,Carta.class);
+            view.addPublicCard(c.getNombre());
+        }else if (type.equals("Player")){
+            view.addIp(mensaje);
+        }else if (type.equals("Salio")){
+            System.out.println(mensaje);
+            view.disconet(mensaje);
         }
     }
 
+
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        if (actionEvent.getActionCommand().equals("Salir")){
+        if (actionEvent.getActionCommand().equals("Salir") && !sali){
             sali = true;
             connection.sendMessage("Sali");
         }
