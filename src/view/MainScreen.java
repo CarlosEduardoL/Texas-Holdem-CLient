@@ -23,7 +23,7 @@ public class MainScreen extends JFrame{
         publicLabelContainer = new JPanel();
         ipsContainer = new JPanel();
         botonContainer = new JPanel();
-        ipsContainer.setLayout(new GridLayout(1,0));
+        ipsContainer.setLayout(new GridLayout(0,1));
         privateLabelContainer.setLayout(new GridLayout(1,0));
         publicLabelContainer.setLayout(new GridLayout(1,0));
         botonContainer.setLayout(new GridLayout(0,1));
@@ -56,6 +56,7 @@ public class MainScreen extends JFrame{
 
     public void addIp(String ip){
         ips.put(ip,new JLabel(ip));
+        ips.get(ip).setText(ips.size() + ":" + ip);
         ipsContainer.add(ips.get(ip));
         pack();
         setSize(600,600);
